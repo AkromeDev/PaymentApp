@@ -48,20 +48,20 @@
 
 .footer {
 	min-height: 100px;
-	background-color: #282828;
-	box-sizing: border-box;
+	background-color: #363636;
 	border-top: 6px solid #e78533;
 	color: #fff;
 	position: absolute;
 	  left: 0;
 	  width: 100%;
+	margin-top: 120px;
 }
 
 .social-buttons-container {
-	min-height: 100px;
+	min-height: 75px;
 	width: 100%;
 	max-width: 1000px;
-	margin: 20px auto 0;
+	margin: 0px auto 0;
 	text-align: center;
 }
 
@@ -100,9 +100,10 @@
 
 .footer-links-container {
 	display: flex;
-	width: 90%;
+	width: 100%;
 	max-width: 950px;
-	margin: 30px auto 80px;
+	margin: auto;
+	
 	text-align: center;
 }
 
