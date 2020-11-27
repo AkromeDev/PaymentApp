@@ -134,8 +134,8 @@
 	min-height: 50px;
 	padding: 0 25px;
 	box-sizing: border-box;
-	background-color: rgba(255,255,255,0.02);
-	box-shadow: 0 0 15px 2px rgba(0,0,0,0.5);
+	background-color: rgba(255,255,255, 1);
+	box-shadow: 0 0 15px 2px rgba(0,0,0,0.7);
 	z-index: 100;
 	backface-visibility: hidden;
 	transition: 0.35s ease;
