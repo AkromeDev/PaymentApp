@@ -33,3 +33,9 @@
 
 <script lang="ts" src="./logs.component.ts">
 </script>
+
+<style scoped>
+    .table {
+        color: black;
+    }
+</style>
