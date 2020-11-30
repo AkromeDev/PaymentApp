@@ -1,0 +1,97 @@
+
+entity SocialMedia {
+	account String
+}
+
+entity Logging {
+	email String required
+    password String required
+}
+
+entity User {
+	firstName String,
+	lastName String,
+	phoneNumber Long,
+	
+}
+
+entity Contacts {
+	
+}
+
+/**
+ * Task ContactRelationship.
+ */
+entity ContactRelationship {
+	
+}
+
+/**
+ * The MyBuddyAccount entity.
+ */
+entity MyBuddyAccount {
+	balance String,
+	profilePicture String,
+}
+
+	/**
+	* One mean of payment at least is required.
+    * PayPal should be added.
+	*/
+entity BankAccount {
+	name String required,
+	iban Long required,
+	bic Long required,
+    
+}
+
+entity Transaction {
+	date ZoneDateTime required,
+	amount Long required,
+	description String
+}
+
+relationship OneToOne {
+	Logging{socialMedia} to SocialMedia{logging}
+}
+
+relationship OneToOne {
+	User{logging} to Logging{user}
+}
+
+relationship OneToOne {
+	User{myBuddyAccount} to MyBuddyAccount{user}
+}
+
+relationship OneToOne {
+	MyBuddyAccount{bankAccount} to BankAccount{myBuddyAccount}
+}
+
+relationship OneToOne {
+	User{contact} to Contacts{user}
+}
+
+relationship OneToMany {
+	Contacts{ContactRelationship} to ContactRelationship{contact}
+}
+
+relationship OneToMany {
+	User{ContactRelationship} to ContactRelationship{user}
+}
+
+relationship OneToMany {
+	MyBuddyAccount{transaction} to Transaction{myBuddyAccount}
+}
+
+relationship OneToOne {
+	Transaction{contactRelationship} to ContactRelationship
+}
+
+// Set pagination options
+paginate Transaction with infinite-scroll
+paginate User, MyBuddyAccount with pagination
+
+
+// Set service options to all
+service all with serviceImpl
+

@@ -28,10 +28,6 @@ import ConfigurationService from '@/admin/configuration/configuration.service';
 
 /* tslint:disable */
 
-import ContactRelationshipService from '@/entities/contact-relationship/contact-relationship.service';
-import MyBuddyAccountService from '@/entities/my-buddy-account/my-buddy-account.service';
-import BankAccountService from '@/entities/bank-account/bank-account.service';
-import MyTransactionService from '@/entities/my-transaction/my-transaction.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -91,10 +87,6 @@ new Vue({
     logsService: () => new LogsService(),
     metricsService: () => new MetricsService(),
     alertService: () => alertService,
-    contactRelationshipService: () => new ContactRelationshipService(),
-    myBuddyAccountService: () => new MyBuddyAccountService(),
-    bankAccountService: () => new BankAccountService(),
-    myTransactionService: () => new MyTransactionService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },
